@@ -1,4 +1,3 @@
-import XHTMLEntities from "./xhtml";
 import { TokenType, types as tt } from "../../tokenizer/types";
 import { TokContext, types as tc } from "../../tokenizer/context";
 import Parser from "../../parser";
@@ -140,8 +139,6 @@ pp.jsxReadEntity = function() {
           if (DECIMAL_NUMBER.test(str))
             entity = String.fromCodePoint(parseInt(str, 10));
         }
-      } else {
-        entity = XHTMLEntities[str];
       }
       break;
     }
